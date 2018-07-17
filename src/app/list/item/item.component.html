@@ -1,0 +1,14 @@
+<div class="activity-row">
+  <div class="activity-desc">
+    <h5>{{item.title}}</h5>
+    <p>{{item.description}}</p>
+    <h6>Tel: +{{item.phone | phone}}</h6>
+  </div>
+  <div class="activity-img">
+    <ul>
+      <li *ngFor="let img of item.images">
+        <img [src]="img">
+      </li>
+    </ul>
+  </div>
+</div>

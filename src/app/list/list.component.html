@@ -1,0 +1,26 @@
+<div class="element-left-bottom">
+  <div class="ele-strip">
+    <ul>
+      <li *ngFor="let type of items | makeFilterMenu; last as l"
+          [ngClass]="{'anc-bor':l, active: type === currentType}"
+          (click)="chooseFilter(type)"
+      >
+        <a>{{type | slice: 0:1}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="village">
+    <h3>Список мест</h3>
+    <span class="line"></span>
+    <div class="activity_box">
+      <div class="scrollbar" id="style-2">
+        <app-item appInit
+                  *ngFor="let item of items | filterItems:currentType  ; first as f"
+                  [first]="f"
+                  [item]="item"
+                  (click)="chooseItem(item)"
+        ></app-item>
+      </div>
+    </div>
+  </div>
+</div>

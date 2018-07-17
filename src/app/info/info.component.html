@@ -1,0 +1,19 @@
+<div class="teddy-bear" *ngIf="item">
+  <div class="teddy-text">
+    <h4>Статистика</h4>
+    <span class="w-line"></span>
+    <img [src]="item.images[1]" class="img-responsive"/>
+  </div>
+  <div class="teddy-follow">
+    <ul>
+      <li class="folw-h">
+        <h3>{{item.followers}}</h3>
+        <p>Читают</p>
+      </li>
+      <li>
+        <h3>{{item.following}}</h3>
+        <p>Интересуются</p>
+      </li>
+    </ul>
+  </div>
+</div>
